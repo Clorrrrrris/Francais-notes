@@ -2936,6 +2936,20 @@ const relatedExercises = {
   "prendre-des-cours-suivre-des-cours-soutien": [48, 49]
 };
 
+const relatedExercisesType2 = {
+  "atelier-cours-galerie-exposition-inauguration-collection": [1],
+  "accueillir-invité-client-rejoindre-atmosphère-conviviale": [1],
+  "anniversaire-fête-naissance-peser-mesurer-combler": [2],
+  "déguster-goûter-savourer-saveur": [2],
+  "vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion": [3],
+  "sommeil-cycle-du-sommeil-repos-appartement-séjour-escapade": [4, 5],
+  "dons-électroménagers-générosité-festival-captivé-hilarant": [6, 7],
+  "polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme": [8],
+  "attester-dévouement-situation-de-rue-collaborateurs-inestimable": [9],
+  "lutter-contre-shampooing-gel-douche-planter-un-arbre": [10],
+  "casser-la-banque-auberge-de-jeunesse-à-petit-prix": [11]
+};
+
 for (const [id, questions] of Object.entries(relatedExercises)) {
   const heading = document.getElementById(id);
   if (!heading) continue;
@@ -2951,6 +2965,33 @@ for (const [id, questions] of Object.entries(relatedExercises)) {
   questions.forEach((questionNumber, index) => {
     const link = document.createElement("a");
     link.href = `comprehension-ecrite/french_notes_exercises.html#q${questionNumber}`;
+    link.textContent = `Q${questionNumber}`;
+    decorateCrossPageLink(link, `q${questionNumber}`);
+    box.appendChild(link);
+
+    if (index < questions.length - 1) {
+      box.appendChild(document.createTextNode(" "));
+    }
+  });
+
+  heading.insertAdjacentElement("afterend", box);
+}
+
+for (const [id, questions] of Object.entries(relatedExercisesType2)) {
+  const heading = document.getElementById(id);
+  if (!heading) continue;
+
+  const box = document.createElement("div");
+  box.className = "exercise-links";
+
+  const label = document.createElement("span");
+  label.className = "small-note";
+  label.textContent = "Related type 2 exercises: ";
+  box.appendChild(label);
+
+  questions.forEach((questionNumber, index) => {
+    const link = document.createElement("a");
+    link.href = `comprehension-ecrite/french_notes_exercises_type_2.html#q${questionNumber}`;
     link.textContent = `Q${questionNumber}`;
     decorateCrossPageLink(link, `q${questionNumber}`);
     box.appendChild(link);
