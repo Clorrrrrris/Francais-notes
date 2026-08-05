@@ -73,6 +73,23 @@ nav#TOC { display: none; }
 .compact-nav a {
   color: #6b7280;
 }
+.answer-section,
+.notes-section {
+  margin-top: 28px;
+}
+.answer-subhead,
+.note-subhead {
+  margin-top: 18px;
+  color: #111827;
+}
+.answer-list,
+.note-list {
+  margin: 8px 0 18px;
+  padding: 14px 16px 14px 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
 </style>
 <p class="compact-nav">
   <a href="#q1">Q1</a> /
@@ -401,6 +418,28 @@ textNodes.forEach((node) => {
   template.innerHTML = html;
   node.replaceWith(template.content);
 });
+
+const answersHeading = document.getElementById("answers");
+if (answersHeading) {
+  answersHeading.classList.add("answer-section");
+  let current = answersHeading.nextElementSibling;
+  while (current && current.id !== "notes") {
+    if (current.tagName === "H3") current.classList.add("answer-subhead");
+    if (current.tagName === "UL") current.classList.add("answer-list");
+    current = current.nextElementSibling;
+  }
+}
+
+const notesHeading = document.getElementById("notes");
+if (notesHeading) {
+  notesHeading.classList.add("notes-section");
+  let current = notesHeading.nextElementSibling;
+  while (current) {
+    if (current.tagName === "H3") current.classList.add("note-subhead");
+    if (current.tagName === "UL") current.classList.add("note-list");
+    current = current.nextElementSibling;
+  }
+}
 
 consumePendingJumpHighlight();
 </script>
