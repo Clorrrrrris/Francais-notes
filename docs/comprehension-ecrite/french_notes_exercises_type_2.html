@@ -28,7 +28,7 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="../../docs/comprehension-ecrite/notes.css" />
+  <link rel="stylesheet" href="notes.css" />
 </head>
 <body>
 <nav id="TOC" role="doc-toc">
@@ -68,14 +68,7 @@ Answer</a></li>
 </nav>
 <h1 id="french-notes---exercises-type-2">French Notes - Exercises Type
 2</h1>
-<div class="nav-links">
-<a href="french_notes_index.html">Home</a>
-<a href="../french_notes_vocab_list.html">Vocabulary List</a>
-<a href="../french_notes_vocab.html">Shared Vocabulary</a>
-<a href="french_notes_exercises.html">Exercises Type 1</a>
-<a href="french_notes_grammar.html">Grammar HTML</a>
-</div>
-<p class="small-note">This page is the second exercise type. Orange highlighted terms can jump to the shared vocabulary page. Jump targets flash temporarily once, then stop flashing after refresh.</p>
+<p>This page keeps the second exercise type.</p>
 <h2 id="q1">Q1</h2>
 <p><code>Rejoignez-nous pour un événement inoubliable !</code></p>
 <p><code>L'Atelier Floral de Marie est ravi de vous inviter à la célébration de son inauguration. Venez explorer notre splendide collection de compositions florales et profitez d'un moment de convivialité.</code></p>
@@ -178,12 +171,12 @@ Answer</a></li>
 <li>做题：排除法，必须找到陷阱并排除掉，才能选答案</li>
 </ul>
 <h2 id="q2">Q2</h2>
-<p><code>Chers amis et famille,</code>（4）</p>
-<p><code>Nous sommes ravis de partager avec vous l'arrivée de notre petite fille, Emma Martin, née le 15 avril 2024.</code>（2）</p>
-<p><code>Elle pèse 3,5 kg et mesure 50 cm.</code>（3）</p>
-<p><code>Emma est devenue la princesse de notre famille et nous comble de bonheur.</code>（3）</p>
+<p><code>Chers amis et famille,</code></p>
+<p><code>Nous sommes ravis de partager avec vous l'arrivée de notre petite fille, Emma Martin, née le 15 avril 2024.</code></p>
+<p><code>Elle pèse 3,5 kg et mesure 50 cm.</code></p>
+<p><code>Emma est devenue la princesse de notre famille et nous comble de bonheur.</code></p>
 <p><code>Avec amour,</code></p>
-<p><code>Alice et Julien Martin</code>（4）</p>
+<p><code>Alice et Julien Martin</code></p>
 <p>Quel événement les phrases ci-dessus décrivent-elles ?</p>
 <ul>
 <li>A. L’anniversaire d’un enfant</li>
@@ -212,6 +205,11 @@ Answer</a></li>
 <li>礼貌用语（客套话）</li>
 </ol></li>
 </ul></li>
+<li><code>Chers amis et famille,</code>（4）</li>
+<li><code>Nous sommes ravis de partager avec vous l'arrivée de notre petite fille, Emma Martin, née le 15 avril 2024.</code>（2）</li>
+<li><code>Elle pèse 3,5 kg et mesure 50 cm.</code>（3）</li>
+<li><code>Emma est devenue la princesse de notre famille et nous comble de bonheur.</code>（3）</li>
+<li><code>Alice et Julien Martin</code>（4）</li>
 <li><code>né - naître</code> 出生</li>
 <li><code>peser</code> 称重
 <ul>
@@ -279,8 +277,8 @@ Answer</a></li>
 <li><code>goûter</code> 下午茶 / 小点心</li>
 </ul>
 <h2 id="q3">Q3</h2>
-<p><code>Salut !</code>（4）</p>
-<p><code>Ça te dirait de vivre une petite aventure ?</code>（2）</p>
+<p><code>Salut !</code></p>
+<p><code>Ça te dirait de vivre une petite aventure ?</code></p>
 <p><code>Ce weekend, on part en randonnée en montagne et on finit par un pique-nique au bord d'un lac. Apporte ta bonne humeur et profitons ensemble de la nature !</code></p>
 <p>Quel est l’objectif de ce texte ?</p>
 <ul>
@@ -295,6 +293,8 @@ Answer</a></li>
 </ul>
 <h3 id="notes-2">Notes</h3>
 <ul>
+<li><code>Salut !</code>（4）</li>
+<li><code>Ça te dirait de vivre une petite aventure ?</code>（2）</li>
 <li><code>Ça te dirait de faire qqch</code>：好不好
 <ul>
 <li><ol type="1">
@@ -441,146 +441,5 @@ qualité.</li>
 <li>C. Un carton d’invitation</li>
 <li>D. Une annonce publicitaire</li>
 </ul>
-<script>
-document.addEventListener("click", (event) => {
-  const link = event.target.closest("a[data-jump-target]");
-  if (!link) return;
-  sessionStorage.setItem("noteJumpTarget", link.dataset.jumpTarget);
-});
-
-function consumePendingJumpHighlight() {
-  const pending = sessionStorage.getItem("noteJumpTarget");
-  const current = decodeURIComponent(location.hash.slice(1));
-  if (!pending || !current || pending !== current) return;
-
-  const target = document.getElementById(current);
-  if (!target) return;
-
-  target.classList.add("jump-flash");
-  target.scrollIntoView({ behavior: "auto", block: "start" });
-  sessionStorage.removeItem("noteJumpTarget");
-  setTimeout(() => target.classList.remove("jump-flash"), 2500);
-}
-
-const vocabLinks = {
-  "atelier": "../french_notes_vocab.html#atelier-cours-galerie-exposition-inauguration-collection",
-  "cours": "../french_notes_vocab.html#atelier-cours-galerie-exposition-inauguration-collection",
-  "galerie": "../french_notes_vocab.html#atelier-cours-galerie-exposition-inauguration-collection",
-  "exposition": "../french_notes_vocab.html#atelier-cours-galerie-exposition-inauguration-collection",
-  "exposer": "../french_notes_vocab.html#atelier-cours-galerie-exposition-inauguration-collection",
-  "Accueillir": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "accueille": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "invité": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "client": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "Rejoindre": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "rejoindre": "../french_notes_vocab.html#accueillir-invité-client-rejoindre-atmosphère-conviviale",
-  "anniversaire": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "fête": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "naissance": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "peser": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "mesurer": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "combler": "../french_notes_vocab.html#anniversaire-fête-naissance-peser-mesurer-combler",
-  "déguster": "../french_notes_vocab.html#déguster-goûter-savourer-saveur",
-  "goûter": "../french_notes_vocab.html#déguster-goûter-savourer-saveur",
-  "savourer": "../french_notes_vocab.html#déguster-goûter-savourer-saveur",
-  "saveur": "../french_notes_vocab.html#déguster-goûter-savourer-saveur",
-  "vivre": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "randonnée": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "pique-nique": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "bonne humeur": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "voyage d'affaires": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "réunion": "../french_notes_vocab.html#vivre-randonnée-pique-nique-bonne-humeur-voyage-daffaires-réunion",
-  "sommeil": "../french_notes_vocab.html#sommeil-cycle-du-sommeil-repos-appartement-séjour-escapade",
-  "appartement": "../french_notes_vocab.html#sommeil-cycle-du-sommeil-repos-appartement-séjour-escapade",
-  "séjour": "../french_notes_vocab.html#sommeil-cycle-du-sommeil-repos-appartement-séjour-escapade",
-  "escapade": "../french_notes_vocab.html#sommeil-cycle-du-sommeil-repos-appartement-séjour-escapade",
-  "festival": "../french_notes_vocab.html#dons-électroménagers-générosité-festival-captivé-hilarant",
-  "captivé": "../french_notes_vocab.html#dons-électroménagers-générosité-festival-captivé-hilarant",
-  "hilarants": "../french_notes_vocab.html#dons-électroménagers-générosité-festival-captivé-hilarant",
-  "polyvalent": "../french_notes_vocab.html#polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme",
-  "sculpture": "../french_notes_vocab.html#polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme",
-  "militant": "../french_notes_vocab.html#polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme",
-  "patriarcat": "../french_notes_vocab.html#polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme",
-  "racisme": "../french_notes_vocab.html#polyvalent-sculpture-art-scientifique-militant-patriarcat-racisme",
-  "atteste": "../french_notes_vocab.html#attester-dévouement-situation-de-rue-collaborateurs-inestimable",
-  "dévouement": "../french_notes_vocab.html#attester-dévouement-situation-de-rue-collaborateurs-inestimable",
-  "collaborateurs": "../french_notes_vocab.html#attester-dévouement-situation-de-rue-collaborateurs-inestimable",
-  "inestimable": "../french_notes_vocab.html#attester-dévouement-situation-de-rue-collaborateurs-inestimable",
-  "lutter contre": "../french_notes_vocab.html#lutter-contre-shampooing-gel-douche-planter-un-arbre",
-  "shampooing": "../french_notes_vocab.html#lutter-contre-shampooing-gel-douche-planter-un-arbre",
-  "gel douche": "../french_notes_vocab.html#lutter-contre-shampooing-gel-douche-planter-un-arbre",
-  "casser la banque": "../french_notes_vocab.html#casser-la-banque-auberge-de-jeunesse-à-petit-prix",
-  "Auberges de Jeunesse": "../french_notes_vocab.html#casser-la-banque-auberge-de-jeunesse-à-petit-prix",
-  "à petit prix": "../french_notes_vocab.html#casser-la-banque-auberge-de-jeunesse-à-petit-prix"
-};
-
-function escapeHtml(text) {
-  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
-function escapeRegExp(text) {
-  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-const entries = Object.entries(vocabLinks).sort((a, b) => b[0].length - a[0].length);
-
-document.querySelectorAll("code").forEach((node) => {
-  let html = escapeHtml(node.textContent);
-  let changed = false;
-
-  for (const [term, href] of entries) {
-    const pattern = new RegExp(escapeRegExp(term), "g");
-    if (pattern.test(node.textContent)) {
-      html = html.replace(pattern, `<a class="term-link" data-jump-target="${href.split("#")[1]}" href="${href}">${term}</a>`);
-      changed = true;
-    }
-  }
-
-  if (changed) {
-    node.innerHTML = html;
-  }
-});
-
-function linkifyText(text) {
-  let html = escapeHtml(text);
-  let changed = false;
-
-  for (const [term, href] of entries) {
-    const pattern = new RegExp(escapeRegExp(term), "g");
-    if (pattern.test(text)) {
-      html = html.replace(pattern, `<a class="term-link" data-jump-target="${href.split("#")[1]}" href="${href}">${term}</a>`);
-      changed = true;
-    }
-  }
-
-  return changed ? html : null;
-}
-
-const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-const textNodes = [];
-let currentNode;
-
-while ((currentNode = walker.nextNode())) {
-  textNodes.push(currentNode);
-}
-
-textNodes.forEach((node) => {
-  const parent = node.parentElement;
-  if (!parent) return;
-  if (parent.closest("nav#TOC, .nav-links, script, style, a")) return;
-  if (parent.tagName === "CODE") return;
-  const text = node.nodeValue;
-  if (!text || !text.trim()) return;
-
-  const html = linkifyText(text);
-  if (!html) return;
-
-  const template = document.createElement("template");
-  template.innerHTML = html;
-  node.replaceWith(template.content);
-});
-
-consumePendingJumpHighlight();
-</script>
 </body>
 </html>
